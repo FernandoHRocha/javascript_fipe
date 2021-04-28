@@ -1,3 +1,8 @@
+/*
+PARA INFORMAÇÕES A RESPEITO DA API ACESSAR O ENDEREÇO ABAIXO
+https://deividfortuna.github.io/fipe/
+*/
+
 function getData(url){
     let request = new XMLHttpRequest()
     request.open("GET", url, false)
