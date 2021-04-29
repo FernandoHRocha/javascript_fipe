@@ -78,6 +78,7 @@ function marcaEscolhida(codigo) {
         for (n = menumodelo.childElementCount; n >= 1; n--) {
             menumodelo.remove(n)
         }
+        menumodelo
     }
     codigomarca = codigo
     if (divmodelo.style.display === 'none') {
