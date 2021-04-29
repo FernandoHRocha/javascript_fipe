@@ -2,7 +2,8 @@
 PARA INFORMAÇÕES A RESPEITO DA API ACESSAR O ENDEREÇO ABAIXO
 https://deividfortuna.github.io/fipe/
 */
-var codigomarca
+var codigomarca = null
+var codigomodelo = null
 var opcaomarca = document.getElementById('opcaomarca')
 
 //INTERAÇÕES COM A BUSCA DA MARCA
@@ -18,6 +19,15 @@ divmodelo.style.display = 'none'
 var menumodelo = document.getElementById('suspensomodelo')
 menumodelo.addEventListener('focusin', () => {
     getLista('https://parallelum.com.br/fipe/api/v1/carros/marcas/' + codigomarca + '/modelos', menumodelo, 'codigo', 'nome', 'modelos')
+})
+menumodelo.addEventListener('change', () => { modeloEscolhido(menumodelo.value) })
+
+//INTERAÇÕES COM A BUSCA DO ANO
+var divano = document.getElementById('divano')
+divano.style.display = 'none'
+var menuano = document.getElementById('suspensoano')
+menuano.addEventListener('focusin', () => {
+    getLista('https://parallelum.com.br/fipe/api/v1/carros/marcas/' + codigomarca + '/modelos/'+ codigomodelo +"/anos", menuano, 'codigo', 'nome', null)
 })
 /*
 RETORNA OS DADOS DA REQUISIÇÃO
@@ -38,6 +48,7 @@ VALOR É O NOME DADO AO CÓDIGO, APRESENTAÇÃO PARA O USUARIO
 function getLista(endpoint, menususpenso, chave, valor, tipo) {
     data = getData(endpoint)
     let itens = JSON.parse(data)
+    console.log(itens)
     //COMPARA SE EXISTEM NOVOS VALORES A SEREM ADICIONADOS
     //EM CASO VERDADEIRO LIMPA A LISTA E ADICIONA OS NOVOS
     if (menususpenso.childElementCount - 1 !== itens.length) {
@@ -63,9 +74,26 @@ function getLista(endpoint, menususpenso, chave, valor, tipo) {
 }
 
 function marcaEscolhida(codigo) {
+    if(codigomarca !== codigo && menumodelo.childElementCount > 1){
+        for (n = menumodelo.childElementCount; n >= 1; n--) {
+            menumodelo.remove(n)
+        }
+    }
     codigomarca = codigo
     if (divmodelo.style.display === 'none') {
         divmodelo.style.display = 'block'
+    }
+}
+
+function modeloEscolhido(codigo) {
+    if(codigomodelo !== codigo && menuano.childElementCount > 1){
+        for (n = menuano.childElementCount; n >= 1; n--) {
+            menuano.remove(n)
+        }
+    }
+    codigomodelo = codigo
+    if (divano.style.display === 'none') {
+        divano.style.display = 'block'
     }
 }
 ;
