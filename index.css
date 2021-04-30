@@ -5,7 +5,7 @@
 }
 body{
     background-color: ghostwhite;
-    font-family: 'Arial';
+    font-family: 'Montserrat';
 }
 .header{
     width:100%;
@@ -16,8 +16,8 @@ body{
 .inner_header{
     width: 90%;
     height:100%;
-    display:block;
-    margin:0 auto;
+    /*display:block;
+    */margin:0 auto;
     background-color: red;
 }
 .title_container{
@@ -36,7 +36,20 @@ body{
     font-weight: 100;
 }
 .title_container h1 span{
-    font-weight: 800;
+    font-weight: 700;
+}
+.nav_tabs{
+    float:right;
+    position:relative;
+    display:table-row;
+}
+.nav_tabs ul{
+    list-style:none;
+    padding: 0px 20px;
+
+}
+.rd_tabs{
+    display:none;
 }
 /*
 .nav_tabs{
