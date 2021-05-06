@@ -44,19 +44,21 @@
 }
 .header .inner_header .nav_tabs ul{
     background: slategrey;
-    width: 100%;
     height: 100%;
+    list-style: none;
     display:flex;
     align-items: flex-end;
-    justify-content: center;
+    justify-content: space-evenly;
 }
-.header .inner_header .nav_tabs ul li{
-    background: slateblue;
-    text-decoration: none;
-    list-style: none;
-    padding: 10px;
-    margin: 0 2%;
+
+.header .inner_header .nav_tabs ul li a{
+    background: blanchedalmond;
+    align-self: center;
+    height: 100%;
+    font-weight: 300;
+    font-size: 24px;
 }
-.header .inner_header .nav_tabs ul li:hover{
+.header .inner_header .nav_tabs ul li a:hover{
+    font-weight: 800;
     cursor: pointer;
 }
