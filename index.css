@@ -4,13 +4,6 @@
   text-decoration: none;
   font-family: "Montserrat";
 }
-.conteudo {
-  padding-top: 120px;
-}
-p{
-    line-height: 30px;
-    margin: 50px;
-}
 .cabecalho {
   position: fixed;
   box-sizing: border-box;
@@ -59,9 +52,11 @@ p{
 .cabecalho .nav_tabs ul li button {
   box-sizing: border-box;
   width: 200px;
-  background-color: transparent;
+  background-color: dimgray;
   color: whitesmoke;
-  border: none;
+  border: 2px solid black;
+  border-bottom: 2px solid dimgray;
+  border-radius: 10px 10px 0 0;
   padding: 10px 20px;
   text-align: center;
   font-weight: 300;
@@ -69,15 +64,29 @@ p{
 }
 .cabecalho .nav_tabs ul li button:hover {
   font-weight: 800;
+  border: 2px solid dimgray;
   cursor: pointer;
+}
+.conteudo {
+  padding-top: 100px;
+}
+.conteudo p{
+    line-height: 30px;
+}
+.conteudo h1{
+  background-color:dimgray;
+    text-align: center;
+    padding: 20px 0;
+}
+.conteudo_principal {
+  width:80%;
+  margin:auto;
 }
 
 #conteudo_busca {
-  width: 80%;
   margin: auto;
 }
 #conteudo_sobre {
-  width: 80%;
   margin: auto;
   text-align: justify;
 }
@@ -94,11 +103,17 @@ p{
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  text-decoration: none;
+}
+.rodape a:visited {
+  color: gainsboro;
+  text-decoration: none;
 }
 .rodape p {
     font-size:22px;
+    font-weight: 100;
 }
 
 .rodape span {
-  font-weight: 800;
+  font-weight: 900;
 }
