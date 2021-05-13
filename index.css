@@ -75,8 +75,11 @@
 }
 .conteudo h1{
   background-color:dimgray;
-    text-align: center;
-    padding: 20px 0;
+    text-align: justify;
+    color:white;
+    font-weight: 300;
+    padding: 20px 10%;
+    margin-bottom: 20px;
 }
 .conteudo_principal {
   width:80%;
@@ -106,6 +109,10 @@
   text-decoration: none;
 }
 .rodape a:visited {
+  color: gainsboro;
+  text-decoration: none;
+}
+.rodape a:link {
   color: gainsboro;
   text-decoration: none;
 }
