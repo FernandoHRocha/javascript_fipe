@@ -2,6 +2,14 @@
 PARA INFORMAÇÕES A RESPEITO DA API ACESSAR O ENDEREÇO ABAIXO
 https://deividfortuna.github.io/fipe/
 */
+/*INTERAÇÕES COM A PÁGINA */
+function trocarConteudo(idmostra, idesconde){
+
+    document.getElementById(idesconde).style.display = 'none'
+    document.getElementById(idmostra).style.display = 'block'
+}
+/*INTERAÇÕES COM A PÁGINA */
+
 var codigomarca = null
 var codigomodelo = null
 var opcaomarca = document.getElementById('opcaomarca')

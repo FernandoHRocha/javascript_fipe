@@ -11,38 +11,63 @@
 </head>
 
 <body>
-    <div class='header'>
-        <div class='title_container'>
+    <div class='cabecalho'>
+        <div class='titulo_cabecalho'>
             <h1>Tabela<span>FIPE</span></h1>
         </div>
         <nav class='nav_tabs'>
             <ul>
-                <li><a href="#" class="sobre_tab">SOBRE</a></li>
-                <li><a href="#" class="busca_tab">BUSCAR</a></li>
+                <li><button onclick="trocarConteudo('conteudo_sobre','conteudo_busca')" class="sobre_tab">SOBRE</a></li>
+                <li><button onclick="trocarConteudo('conteudo_busca','conteudo_sobre')" class="busca_tab">BUSCAR</a>
+                </li>
             </ul>
         </nav>
     </div>
-    <h1>DE QUAL VEÍCULO VOCÊ GOSTARIA DE SABER O PREÇO NA TABELA FIPE?</h1>
-    <div id='divmarca'>
-        <h2>Escolha a marca do veículo:</h2>
-        <select id='suspensomarca'>
-            <option tag='padrao' selected disabled>Escolha a marca</option>
-        </select>
-    </div>
-    <div id='divmodelo'>
-        <h2>Escolha o modelo:</h2>
-        <select id='suspensomodelo'>
-            <option tag='padrao' selected disabled>Escolha o modelo</option>
-        </select>
-    </div>
-    <div id='divano'>
-        <h2>Escolha o ano:</h2>
-        <select id='suspensoano'>
-            <option tag='padrao' selected disabled>Escolha o ano</option>
-        </select>
+    <div class="conteudo">
+        <div id="conteudo_busca" style='display:none;'>
+            <h1>DE QUAL VEÍCULO VOCÊ GOSTARIA DE SABER O PREÇO NA TABELA FIPE?</h1>
+            <div id='divmarca'>
+                <h2>Escolha a marca do veículo:</h2>
+                <select id='suspensomarca'>
+                    <option tag='padrao' selected disabled>Escolha a marca</option>
+                </select>
+            </div>
+            <div id='divmodelo'>
+                <h2>Escolha o modelo:</h2>
+                <select id='suspensomodelo'>
+                    <option tag='padrao' selected disabled>Escolha o modelo</option>
+                </select>
+            </div>
+            <div id='divano'>
+                <h2>Escolha o ano:</h2>
+                <select id='suspensoano'>
+                    <option tag='padrao' selected disabled>Escolha o ano</option>
+                </select>
+            </div>
+        </div>
+        <div id="conteudo_sobre">
+            <h1>TABELA DE REFERENCIA PARA NEGOCIAÇÕES DE VEÍCULOS</h1>
+            <p class="primeiro">
+                A FIPE foi criada em 1973 para auxiliar a Faculdade de Economia, Administração e Contabilidade da
+                Universidade de São Paulo. O órgão presta serviços ao governo e empresas privadas, e tem no Preço Médio
+                de Veículos, também chamada de Tabela FIPE, um de seus principais produtos.O índice é baseado na coleta
+                de preços de carros, motos e caminhões usados, seminovos e novos no mercado nacional. Em posse dos
+                valores, pesquisadores descartam os preços muito altos, baixos ou com alguma discrepância estatística.
+                Os números restantes são usados para criar uma média, e é esse o valor que vai constar para aquele
+                determinado veículo na tabela.A tabela é atualizada mensalmente, e cada pesquisa pode ser refinada com a
+                versão, motorização e ano-modelo do automóvel em questão.Hoje, o índice continua a ser a principal
+                referência para lojistas, comerciantes e vendedores. Ele também serve de base para o cálculo de seguros
+                e tributos, como o IPVA. Mas ninguém é obrigado a segui-la ao pé da letra.
+            </p>
+        </div>
     </div>
 
     <script src='main.js'></script>
 </body>
+<footer>
+    <div class="rodape">
+        <p class="autor">FERNANDO<span>ROCHA</span></p>
+    </div>
+</footer>
 
 </html>

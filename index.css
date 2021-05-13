@@ -1,67 +1,104 @@
-*{
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    font-family: 'Montserrat';
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: "Montserrat";
+}
+.conteudo {
+  padding-top: 120px;
+}
+p{
+    line-height: 30px;
+    margin: 50px;
+}
+.cabecalho {
+  position: fixed;
+  box-sizing: border-box;
+  background-color: black;
+  color: whitesmoke;
+  padding: 0 10%;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.header{
-    box-sizing:border-box;
-    background: cornflowerblue;
-    padding: 0 10%;
-    width: 100%;
-    height: 100px;
-    background: darkcyan;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.cabecalho .titulo_cabecalho {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 25%;
+  height: 100%;
+}
+.cabecalho .titulo_cabecalho h1 {
+  font-weight: 300;
+}
+.cabecalho .titulo_cabecalho span {
+  font-weight: 800;
+}
+.cabecalho .nav_tabs {
+  height: 100%;
+  width: 50%;
+}
+.cabecalho .nav_tabs ul {
+  box-sizing: border-box;
+  display: flex;
+  height: 100%;
+  list-style: none;
+  align-items: flex-end;
+  justify-content: center;
+}
+.cabecalho .nav_tabs ul li {
+  height: 100%;
+  margin: 0 5px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.cabecalho .nav_tabs ul li button {
+  box-sizing: border-box;
+  width: 200px;
+  background-color: transparent;
+  color: whitesmoke;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  font-weight: 300;
+  font-size: 24px;
+}
+.cabecalho .nav_tabs ul li button:hover {
+  font-weight: 800;
+  cursor: pointer;
 }
 
-.header .title_container{
-    background: tomato;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    width: 25%;
-    height: 100%;
+#conteudo_busca {
+  width: 80%;
+  margin: auto;
 }
-.header .title_container h1{
-    font-weight: 300;
+#conteudo_sobre {
+  width: 80%;
+  margin: auto;
+  text-align: justify;
 }
-.header .title_container span{
-    font-weight: 800;
+.rodape {
+  bottom: 0;
+  box-sizing: border-box;
+  padding: 0 10%;
+  width: 100%;
+  height: 50px;
+  color: gainsboro;
+  background-color: black;
+  position: fixed;
+  text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
-.header .nav_tabs{
-    background: chocolate;
-    height: 100%;
-    width: 50%;
+.rodape p {
+    font-size:22px;
 }
-.header .nav_tabs ul{
-    background: slategrey;
-    box-sizing: border-box;
-    display: flex;
-    height: 100%;
-    list-style: none;
-    align-items: flex-end;
-    justify-content: center;
-}
-.header .nav_tabs ul li{
-    background: blanchedalmond;
-    height: 100%;
-    margin:0 5px;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-}
-.header .nav_tabs ul li a{
-    border: none;
-    background-color: black;
-    padding: 10px 20px;
-    text-align: center;
-    font-weight: 300;
-    font-size: 24px;
-}
-.header .nav_tabs ul li a:hover{
-    font-weight: 800;
-    cursor: pointer;
+
+.rodape span {
+  font-weight: 800;
 }
