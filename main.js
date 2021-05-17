@@ -12,6 +12,7 @@ function trocarConteudo(idmostra, idesconde){
 
 var codigomarca = null
 var codigomodelo = null
+var codigoano = null
 var opcaomarca = document.getElementById('opcaomarca')
 
 //INTERAÇÕES COM A BUSCA DA MARCA
@@ -37,6 +38,7 @@ var menuano = document.getElementById('suspensoano')
 menuano.addEventListener('focusin', () => {
     getLista('https://parallelum.com.br/fipe/api/v1/carros/marcas/' + codigomarca + '/modelos/'+ codigomodelo +"/anos", menuano, 'codigo', 'nome', null)
 })
+menuano.addEventListener('change', () => { anoEscolhido(menuano.value) })
 /*
 RETORNA OS DADOS DA REQUISIÇÃO
 */
@@ -86,7 +88,7 @@ function marcaEscolhida(codigo) {
         for (n = menumodelo.childElementCount; n >= 1; n--) {
             menumodelo.remove(n)
         }
-        menumodelo
+        divano.style.display = 'none'
     }
     codigomarca = codigo
     if (divmodelo.style.display === 'none') {
@@ -104,5 +106,19 @@ function modeloEscolhido(codigo) {
     if (divano.style.display === 'none') {
         divano.style.display = 'block'
     }
+}
+
+function anoEscolhido(codigo) {
+    if(codigoano !== codigo){
+        console.log(codigo)
+        mostrarReferencia(codigo)
+    }
+    
+}
+
+function mostrarReferencia(codigo) {
+    console.log(
+        getData('https://parallelum.com.br/fipe/api/v1/carros/marcas/' + codigomarca + '/modelos/'+ codigomodelo +"/anos/"+ codigo)
+    )
 }
 ;
