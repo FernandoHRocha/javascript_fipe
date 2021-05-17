@@ -42,12 +42,21 @@
 }
 .cabecalho .nav_tabs ul li button {
   box-sizing: border-box;
+<<<<<<< HEAD
   min-width: 220px;
   height: 100%;
   background-color: transparent;
   color: whitesmoke;
   border: none;
   text-decoration: none;
+=======
+  width: 200px;
+  background-color: dimgray;
+  color: whitesmoke;
+  border: 2px solid black;
+  border-bottom: 2px solid dimgray;
+  border-radius: 10px 10px 0 0;
+>>>>>>> c85033ab0a336ebc00cede10ea738cbb73cf809d
   padding: 10px 20px;
   text-align: center;
   font-weight: 300;
@@ -56,11 +65,34 @@
   transition: all 1s;
 }
 .cabecalho .nav_tabs ul li button:hover {
+<<<<<<< HEAD
   letter-spacing: normal;
+=======
+  font-weight: 800;
+  border: 2px solid dimgray;
+>>>>>>> c85033ab0a336ebc00cede10ea738cbb73cf809d
   cursor: pointer;
   background-color: white;
   color: whitesmoke;
   background-color: rgba(255,255,255,0.1);
+}
+.conteudo {
+  padding-top: 100px;
+}
+.conteudo p{
+    line-height: 30px;
+}
+.conteudo h1{
+  background-color:dimgray;
+    text-align: justify;
+    color:white;
+    font-weight: 300;
+    padding: 20px 10%;
+    margin-bottom: 20px;
+}
+.conteudo_principal {
+  width:80%;
+  margin:auto;
 }
 
 .conteudo {
@@ -77,7 +109,6 @@ p{
   margin-top: 40px;
 }
 #conteudo_busca {
-  width: 80%;
   margin: auto;
 }
 .suspenso{
@@ -90,7 +121,6 @@ p{
 }
 
 #conteudo_sobre {
-  width: 80%;
   margin: auto;
   text-align: justify;
 }
@@ -107,11 +137,25 @@ p{
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  text-decoration: none;
+}
+.rodape a:visited {
+  color: gainsboro;
+  text-decoration: none;
+}
+.rodape a:link {
+  color: gainsboro;
+  text-decoration: none;
 }
 .rodape p {
+<<<<<<< HEAD
   font-size:22px;
+=======
+    font-size:22px;
+    font-weight: 100;
+>>>>>>> c85033ab0a336ebc00cede10ea738cbb73cf809d
 }
 
 .rodape span {
-  font-weight: 800;
+  font-weight: 900;
 }
