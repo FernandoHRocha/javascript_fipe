@@ -25,10 +25,23 @@
     </div>
     <div class="conteudo">
         <div id="conteudo_busca">
-            <h1>DE QUAL VEÍCULO VOCÊ GOSTARIA DE SABER O PREÇO NA TABELA FIPE?</h1>
+            <ul class="categoria">
+                <li>
+                    <input type="radio" id="cat_carros" name="radio_cat">
+                    <label for="cat_carros">CARROS</label>
+                </li>
+                <li>
+                    <input type="radio" id="cat_motos"  name="radio_cat">
+                    <label for="cat_motos">MOTOS</label>
+                </li>
+                <li>
+                    <input type="radio" id="cat_caminhoes"  name="radio_cat">
+                    <label for="cat_caminhoes">CAMINHÕES</label>
+                </li>
+            </ul>
             <div id='divmarca' class='divmenu'>
                 <h2>Escolha a marca do veículo:</h2>
-                <select id='suspensomarca'  class='suspenso'>
+                <select id='suspensomarca' class='suspenso'>
                     <option tag='padrao' selected disabled>Escolha a marca</option>
                 </select>
             </div>
@@ -46,7 +59,7 @@
             </div>
         </div>
         <div id="conteudo_resultado">
-            <h1 id="h1_modelo">O preço de referência para o veículo escolhido</h1>
+            <h1 id="h1_modelo"></h1>
             <h3 id="h3_valor"></h3>
         </div>
         <div id="conteudo_sobre">

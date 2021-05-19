@@ -16,10 +16,11 @@
   justify-content: space-between;
 }
 .cabecalho .titulo_cabecalho {
+  font-size: 1.5em;
   margin: auto 0;
 }
 .cabecalho .titulo_cabecalho h1 {
-  font-weight: 300;
+  font-weight: 200;
 }
 .cabecalho .titulo_cabecalho span {
   font-weight: 800;
@@ -35,7 +36,6 @@
   list-style: none;
 }
 .cabecalho .nav_tabs ul li {
-  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -65,14 +65,55 @@
 .divmenu {
   padding: 20px;
   margin-top: 40px;
-  border-radius: 30px;
-  background-color: rgb(31,36,43);
+  border-radius: 10px;
+  background-color: black;
 }
 .divmenu > h2{
   color: white;
   font-weight:500;
   font-size: 30px;
   margin: 0 0 20px 0;
+}
+.categoria {
+  width: 100%;
+  height: 80px;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+.categoria li {
+  text-align: center;
+  width: inherit;
+  height: 100%;
+}
+.categoria li input{
+  display:none;
+}
+.categoria li label{
+  color: white;
+  letter-spacing: normal;
+  font-size: 1.4em;
+  height:100%;
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  background-color: black;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.categoria li:first-child label{
+  border-radius: 10px 0 0 10px;
+}
+.categoria li:last-child label{
+  border-radius: 0 10px 10px 0;
+}
+.categoria li label:hover{
+  letter-spacing: 10px;
+  background-color: rgba(0,0,0,0.9);
+}
+.categoria li input:checked + label{
+  letter-spacing: 10px;
 }
 .suspenso{
   appearance: none;
