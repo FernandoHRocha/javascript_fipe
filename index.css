@@ -32,8 +32,10 @@
 .cabecalho .nav_tabs ul {
   box-sizing: border-box;
   display: flex;
+  flex-wrap: wrap;
   height: 100%;
   list-style: none;
+  justify-content: center;
 }
 .cabecalho .nav_tabs ul li {
   display: flex;
@@ -52,11 +54,11 @@
   text-align: center;
   font-weight: 300;
   font-size: 24px;
-  letter-spacing: 12px;
+  letter-spacing: normal;
   transition: all 0.5s;
 }
 .cabecalho .nav_tabs ul li button:hover {
-  letter-spacing: normal;
+  letter-spacing: 12px;
   cursor: pointer;
   background-color: white;
   color: whitesmoke;
@@ -137,13 +139,46 @@
   margin: auto;
   overflow: auto;
 }
-.primeiro{
-    line-height: 30px;
-    margin: 50px auto;
+#conteudo_sobre p{
+    line-height: 24px;
+    margin: 20px auto;
+}
+#conteudo_sobre .textos{
+    margin-top: 40px;
+}
+.fonte {
+  text-align: center;
+  text-decoration: none;
+}
+.fonte a {
+  color: black;
+  font-weight: bold;
 }
 #conteudo_busca, #conteudo_sobre {
   margin: auto;
   text-align: justify;
+}
+#conteudo_resultado{
+  text-align: center;
+}
+#conteudo_resultado h3{
+  margin-top: 20px;
+  font-size: 3em;
+  font-weight: 100;
+}
+.agradecimento p{
+  text-align: center;
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+.agradecimento p:first-child{
+  margin-top: 30px;
+}
+.agradecimento p:last-child{
+  margin-top: 50px;
+}
+.inspiracao{
+  font-weight:bold;
 }
 .rodape {
   bottom: 0;
