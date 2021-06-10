@@ -193,7 +193,9 @@
   align-items: center;
   justify-content: flex-end;
 }
-.rodape p {
+.rodape a {
+  color: inherit;
+  text-decoration:none;
   font-size:22px;
 }
 
